@@ -5,7 +5,10 @@ const config: GatsbyConfig = {
     title: `DevNexus 2023`,
     siteUrl: `https://novel-dew.cloudvent.net/`
   },
-  plugins: ["gatsby-plugin-sass",
+  plugins: ["gatsby-plugin-react-helmet",
+            'gatsby-plugin-mui-emotion',
+            'gatsby-plugin-top-layout',
+            "gatsby-plugin-sass",
             {
               resolve: `gatsby-plugin-manifest`,
               options: {

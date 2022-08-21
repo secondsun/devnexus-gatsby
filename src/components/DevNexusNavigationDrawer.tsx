@@ -13,7 +13,7 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { styled, useTheme, Theme, CSSObject } from '@mui/material/styles';
 import MuiDrawer from '@mui/material/Drawer';
-
+import Link from "./Link"
 
 export interface NavigationIcon {
     label : string,
@@ -108,26 +108,28 @@ export default function DevNexusNavigationDrawer(props : DevNexusNavigationDrawe
         <Divider />
         <List>
             {props.primaryNavigation.map(({label, icon, route}, index) => (
-                <ListItem key={label} disablePadding sx={{ display: 'block' }}>
-                    <ListItemButton
-                        sx={{
-                            minHeight: 48,
-                            justifyContent: open ? 'initial' : 'center',
-                            px: 2.5,
-                        }}
-                    >
-                        <ListItemIcon
+                <Link to={route}>
+                    <ListItem key={label} disablePadding sx={{ display: 'block' }}>
+                        <ListItemButton
                             sx={{
-                                minWidth: 0,
-                                mr: open ? 3 : 'auto',
-                                justifyContent: 'center',
+                                minHeight: 48,
+                                justifyContent: open ? 'initial' : 'center',
+                                px: 2.5,
                             }}
                         >
-                            {icon}
-                        </ListItemIcon>
-                        <ListItemText primary={label} sx={{ opacity: open ? 1 : 0 }} />
-                    </ListItemButton>
-                </ListItem>
+                            <ListItemIcon
+                                sx={{
+                                    minWidth: 0,
+                                    mr: open ? 3 : 'auto',
+                                    justifyContent: 'center',
+                                }}
+                            >
+                                {icon}
+                            </ListItemIcon>
+                            <ListItemText primary={label} sx={{ opacity: open ? 1 : 0 }} />
+                        </ListItemButton>
+                    </ListItem>
+                </Link>
             ))}
         </List>
         <Divider />

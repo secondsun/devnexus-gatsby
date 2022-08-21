@@ -22,7 +22,9 @@ const config: GatsbyConfig = {
 
               }
             },
-            'gatsby-plugin-offline']
+            'gatsby-plugin-offline'
+          ]
+  
 };
 
 export default config;

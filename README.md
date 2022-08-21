@@ -1,54 +1,27 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal TypeScript starter
-</h1>
+# DevNexus Gatsby
 
-## 🚀 Quick start
+This project is the gatsby powered devnexus site to be used for the 2023 conference onward.
 
-1.  **Create a Gatsby site.**
+# Development
+## Prerequisites
+To run the project you need node.js installed with NPM, make, python3, gcc, and g++. These are available on most operating systems.
+## Coding
+```
+npm run develop
+```
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+### Json Data
+Json Data is sourced from sessionize and placed into the `/src/content` directory
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby
-    ```
+## Release
+The prototype branch is wired into a CI/CD sytem powered by Cloud Cannon.
 
-2.  **Start developing.**
+# Site Layout
 
-    Navigate into your new site’s directory and start it up.
+## Speakers Page
+The Speakers page loads data from `/src/content/speakers.json` and uses the sessionize speakers json endpoint (ex. https://sessionize.com/api/v2/cbm0wqt9/view/Speakers)
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+URLs follow the pattern `/speakers` for all speakers and `/speakers/${id}` for individual bios
 
-3.  **Open the code and start customizing!**
+## Session Page
 
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.tsx` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
